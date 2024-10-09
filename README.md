@@ -34,7 +34,6 @@ This is a Node.js application that fetches and stores cryptocurrency data (Bitco
 1. [Node.js](https://nodejs.org/) installed on your machine.
 2. [MongoDB Atlas](https://www.mongodb.com/atlas/database) account or a local MongoDB installation.
 3. [Git](https://git-scm.com/downloads) for version control.
-4. [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) for deployment (if deploying on Azure).
 
 ### Cloning the Repository
 
