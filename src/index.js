@@ -16,6 +16,11 @@ mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: t
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Function to fetch and store cryptocurrency data
+app.get('/', async (req, res) => {
+  consol.log("Go TO /stats?coin=<name of the coin> or /deviation?coin=<name of the coin>")
+})
+
+
 const fetchCryptoData = async () => {
   const coins = ['bitcoin', 'matic-network', 'ethereum'];
   for (const coin of coins) {
@@ -41,6 +46,11 @@ const fetchCryptoData = async () => {
 
 // Schedule the job to run every 2 hours
 schedule.scheduleJob('0 */2 * * *', fetchCryptoData);
+
+
+app.get('/', async (req, res) => {
+  consol.log("Go TO /stats?coin=<name of the coin> or /deviation?coin=<name of the coin>")
+})
 
 // API to get the latest data about a cryptocurrency
 app.get('/stats', async (req, res) => {
